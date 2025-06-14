@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <body class=" flex items-end h-screen">
+
+    <div class="bg-white w-full rounded-t-3xl shadow-lg p-6 border-1 border-gray-300">
+
+  <input type="checkbox" id="toggleButtons" class="hidden peer" />
+
+  <label for="toggleButtons" class="w-16 h-1.5 bg-purple-700 rounded-full mx-auto mb-6 block cursor-pointer hover:bg-fuchsia-800"></label>
+
+  <p class="text-center text-lg text-custom-purple mb-8">
+    ¿Qué quieres marcar en el mapa?
+  </p>
+
+  <div class="peer-checked:max-h-0 max-h-[500px] overflow-hidden transition-all duration-500 ease-in-out flex justify-around items-start text-center">
+
+    <div class="flex flex-col items-center">
+      <button class="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+        <i class="fas fa-exclamation-triangle fa-2x"></i>
+      </button>
+      <span class="mt-2 text-custom-purple font-medium">Peligro</span>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <button class="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+        <i class="fas fa-hands-helping fa-2x"></i>
+      </button>
+      <span class="mt-2 text-custom-purple font-medium">Centro de ayuda</span>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <button class="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+        <i class="fas fa-check-circle fa-2x"></i>
+      </button>
+      <span class="mt-2 text-custom-purple font-medium">Zona segura</span>
+    </div>
+
+  </div>
+</div>
+</body>
+    
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
