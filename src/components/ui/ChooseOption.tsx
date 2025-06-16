@@ -1,50 +1,28 @@
+import type React from "react"
+
 interface ChooseOptionProps {
-    text: string,
-    btnDanger : string,
-    btnHelp : string,
-    btnSafe : string
-        
-    }
-    
-    export default function ChooseOption(props: ChooseOptionProps) {
-        return (
-            <body className=" flex items-end h-screen">
+  text: string;
+  bottonBar?: React.ReactNode;
+}
 
-    <div className="bg-white w-full rounded-t-3xl shadow-lg p-6 border-1 border-gray-300">
+export default function ChooseOption(props: ChooseOptionProps) {
+  return (
+    <div className="flex items-end h-screen">
+      <div className="bg-white w-full rounded-t-3xl shadow-lg p-6 border border-gray-300">
+        <input type="checkbox" id="toggleButtons" className="hidden peer" />
 
-  <input type="checkbox" id="toggleButtons" className="hidden peer" />
+        <label
+          htmlFor="toggleButtons"
+          className="w-16 h-1.5 bg-purple-700 rounded-full mx-auto mb-6 block cursor-pointer hover:bg-fuchsia-800"
+        ></label>
 
-  <label htmlFor="toggleButtons" className="w-16 h-1.5 bg-purple-700 rounded-full mx-auto mb-6 block cursor-pointer hover:bg-fuchsia-800"></label>
+        <p className="text-center text-lg text-custom-purple mb-8">
+          {props.text}
+        </p>
 
-  <p className="text-center text-lg text-custom-purple mb-8">
-    ¿Qué quieres marcar en el mapa?
-  </p>
+        {props.bottonBar ? props.bottonBar : ""}
 
-  <div className="peer-checked:max-h-0 max-h-[500px] overflow-hidden transition-all duration-500 ease-in-out flex justify-around items-start text-center">
-
-    <div className="flex flex-col items-center">
-      <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-        <i className="fas fa-exclamation-triangle fa-2x"></i>
-      </button>
-      <span className="mt-2 text-custom-purple font-medium">Peligro</span>
+      </div>
     </div>
-
-    <div className="flex flex-col items-center">
-      <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-        <i className="fas fa-hands-helping fa-2x"></i>
-      </button>
-      <span className="mt-2 text-custom-purple font-medium">Centro de ayuda</span>
-    </div>
-
-    <div className="flex flex-col items-center">
-      <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-        <i className="fas fa-check-circle fa-2x"></i>
-      </button>
-      <span className="mt-2 text-custom-purple font-medium">Zona segura</span>
-    </div>
-
-  </div>
-</div>
-</body>
-        );
-    }
+  );
+}
