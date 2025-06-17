@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SigninRouteImport } from './routes/signin'
 import { Route as RecoverRouteImport } from './routes/recover'
+import { Route as HomepageRouteImport } from './routes/homepage'
+import { Route as HelpCenterSelectedRouteImport } from './routes/helpCenterSelected'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SignupRoute = SignupRouteImport.update({
@@ -29,6 +31,16 @@ const RecoverRoute = RecoverRouteImport.update({
   path: '/recover',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HomepageRoute = HomepageRouteImport.update({
+  id: '/homepage',
+  path: '/homepage',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpCenterSelectedRoute = HelpCenterSelectedRouteImport.update({
+  id: '/helpCenterSelected',
+  path: '/helpCenterSelected',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +49,16 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/helpCenterSelected': typeof HelpCenterSelectedRoute
+  '/homepage': typeof HomepageRoute
   '/recover': typeof RecoverRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/helpCenterSelected': typeof HelpCenterSelectedRoute
+  '/homepage': typeof HomepageRoute
   '/recover': typeof RecoverRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
@@ -50,20 +66,43 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/helpCenterSelected': typeof HelpCenterSelectedRoute
+  '/homepage': typeof HomepageRoute
   '/recover': typeof RecoverRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/recover' | '/signin' | '/signup'
+  fullPaths:
+    | '/'
+    | '/helpCenterSelected'
+    | '/homepage'
+    | '/recover'
+    | '/signin'
+    | '/signup'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/recover' | '/signin' | '/signup'
-  id: '__root__' | '/' | '/recover' | '/signin' | '/signup'
+  to:
+    | '/'
+    | '/helpCenterSelected'
+    | '/homepage'
+    | '/recover'
+    | '/signin'
+    | '/signup'
+  id:
+    | '__root__'
+    | '/'
+    | '/helpCenterSelected'
+    | '/homepage'
+    | '/recover'
+    | '/signin'
+    | '/signup'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  HelpCenterSelectedRoute: typeof HelpCenterSelectedRoute
+  HomepageRoute: typeof HomepageRoute
   RecoverRoute: typeof RecoverRoute
   SigninRoute: typeof SigninRoute
   SignupRoute: typeof SignupRoute
@@ -92,6 +131,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RecoverRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/homepage': {
+      id: '/homepage'
+      path: '/homepage'
+      fullPath: '/homepage'
+      preLoaderRoute: typeof HomepageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/helpCenterSelected': {
+      id: '/helpCenterSelected'
+      path: '/helpCenterSelected'
+      fullPath: '/helpCenterSelected'
+      preLoaderRoute: typeof HelpCenterSelectedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +157,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  HelpCenterSelectedRoute: HelpCenterSelectedRoute,
+  HomepageRoute: HomepageRoute,
   RecoverRoute: RecoverRoute,
   SigninRoute: SigninRoute,
   SignupRoute: SignupRoute,

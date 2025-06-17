@@ -1,9 +1,4 @@
-import type React from "react"
-
-interface ChooseOptionProps {
-  text: string;
-  bottonBar?: React.ReactNode;
-}
+interface ChooseOptionProps {}
 
 export default function ChooseOption(props: ChooseOptionProps) {
   return (
@@ -25,10 +20,33 @@ export default function ChooseOption(props: ChooseOptionProps) {
         ></label>
 
         <p className="text-center text-lg text-custom-purple mb-8">
-          {props.text}
+          Qué quieres marcar en el mapa?
         </p>
 
-        {props.bottonBar ? props.bottonBar : ""}
+        <div className="flex flex-col items-center">
+            <button className="w-16 h-16 flex items-center justify-center  border border-purple-700 rounded-full text-custom-purple hover:bg-purple-200 transition-colors cursor-pointer">
+              <img src=""alt="Icono de peligro" className="w-6 h-6 object-contain" />
+            </button>
+            <span className="mt-2 text-custom-purple font-medium">Peligro</span>
+          </div>
+
+        
+          <div className="flex flex-col items-center">
+            <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-200 transition-colors cursor-pointer">
+              <img src=""alt="Icono de ayuda" className="w-6 h-6 object-contain" />
+            </button>
+            <span className="mt-2 text-custom-purple font-medium">Centro de ayuda</span>
+          </div>
+
+        
+          <div className="flex flex-col items-center">
+            <button className="w-16 h-16 flex items-center justify-center  border border-purple-700 rounded-full text-custom-purple hover:bg-purple-200 transition-colors cursor-pointer">
+              <img src="" alt="Icono de zona segura" className="w-6 h-6 object-contain" />
+            </button>
+            <span className="mt-2 text-custom-purple font-medium">Zona segura</span>
+          </div>
+
+        
 
       </div>
     </div>
