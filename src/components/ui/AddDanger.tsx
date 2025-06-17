@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 interface AddDangerProps {
     
 }
@@ -13,6 +15,12 @@ export default function AddDanger(props: AddDangerProps) {
           alt="Inicio"
           className="w-6 h-6 object-contain"
         />
+        <Link
+          to="/homepage"
+          className="text-purple font-medium underline"
+        >
+
+        </Link>
       </button>
 
       <div className="fixed inset-0 flex items-center justify-center z-50 p-4 translate-y-[-80px]">
@@ -23,6 +31,12 @@ export default function AddDanger(props: AddDangerProps) {
               alt="Cerrar"
               className="h-8 w-8"
             />
+            <Link
+              to="/chooseOption"
+              className="text-purple font-medium underline"
+            >
+
+            </Link>
           </button>
 
           <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center border-2 border-custom-purple rounded-full">
@@ -45,6 +59,17 @@ export default function AddDanger(props: AddDangerProps) {
               placeholder="Write here"
               className="w-full border-1 border-purple-700 rounded-full py-3 px-5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-300 placeholder-custom"
             />
+
+            <button
+              className="w-full bg-purple-700 text-white py-3 px-5 rounded-full hover:bg-purple-800 transition-colors font-medium">
+              Guardar
+              <Link
+                to="/chooseOption"
+                className="text-purple font-medium underline"
+              >
+
+              </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -94,7 +119,7 @@ export default function AddDanger(props: AddDangerProps) {
                 Zona segura
               </span>
             </div>
-            
+
           </div>
         </div>
       </div>
