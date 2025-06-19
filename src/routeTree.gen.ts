@@ -13,6 +13,7 @@ import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SigninRouteImport } from './routes/signin'
 import { Route as SafeSelectedRouteImport } from './routes/safeSelected'
 import { Route as RecoverRouteImport } from './routes/recover'
+import { Route as MenuRouteImport } from './routes/menu'
 import { Route as HomepageRouteImport } from './routes/homepage'
 import { Route as HelpCenterSelectedRouteImport } from './routes/helpCenterSelected'
 import { Route as DangerSelectedRouteImport } from './routes/dangerSelected'
@@ -40,6 +41,11 @@ const SafeSelectedRoute = SafeSelectedRouteImport.update({
 const RecoverRoute = RecoverRouteImport.update({
   id: '/recover',
   path: '/recover',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuRoute = MenuRouteImport.update({
+  id: '/menu',
+  path: '/menu',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HomepageRoute = HomepageRouteImport.update({
@@ -92,6 +98,7 @@ export interface FileRoutesByFullPath {
   '/dangerSelected': typeof DangerSelectedRoute
   '/helpCenterSelected': typeof HelpCenterSelectedRoute
   '/homepage': typeof HomepageRoute
+  '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
   '/signin': typeof SigninRoute
@@ -106,6 +113,7 @@ export interface FileRoutesByTo {
   '/dangerSelected': typeof DangerSelectedRoute
   '/helpCenterSelected': typeof HelpCenterSelectedRoute
   '/homepage': typeof HomepageRoute
+  '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
   '/signin': typeof SigninRoute
@@ -121,6 +129,7 @@ export interface FileRoutesById {
   '/dangerSelected': typeof DangerSelectedRoute
   '/helpCenterSelected': typeof HelpCenterSelectedRoute
   '/homepage': typeof HomepageRoute
+  '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
   '/signin': typeof SigninRoute
@@ -137,6 +146,7 @@ export interface FileRouteTypes {
     | '/dangerSelected'
     | '/helpCenterSelected'
     | '/homepage'
+    | '/menu'
     | '/recover'
     | '/safeSelected'
     | '/signin'
@@ -151,6 +161,7 @@ export interface FileRouteTypes {
     | '/dangerSelected'
     | '/helpCenterSelected'
     | '/homepage'
+    | '/menu'
     | '/recover'
     | '/safeSelected'
     | '/signin'
@@ -165,6 +176,7 @@ export interface FileRouteTypes {
     | '/dangerSelected'
     | '/helpCenterSelected'
     | '/homepage'
+    | '/menu'
     | '/recover'
     | '/safeSelected'
     | '/signin'
@@ -180,6 +192,7 @@ export interface RootRouteChildren {
   DangerSelectedRoute: typeof DangerSelectedRoute
   HelpCenterSelectedRoute: typeof HelpCenterSelectedRoute
   HomepageRoute: typeof HomepageRoute
+  MenuRoute: typeof MenuRoute
   RecoverRoute: typeof RecoverRoute
   SafeSelectedRoute: typeof SafeSelectedRoute
   SigninRoute: typeof SigninRoute
@@ -214,6 +227,13 @@ declare module '@tanstack/react-router' {
       path: '/recover'
       fullPath: '/recover'
       preLoaderRoute: typeof RecoverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu': {
+      id: '/menu'
+      path: '/menu'
+      fullPath: '/menu'
+      preLoaderRoute: typeof MenuRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/homepage': {
@@ -284,6 +304,7 @@ const rootRouteChildren: RootRouteChildren = {
   DangerSelectedRoute: DangerSelectedRoute,
   HelpCenterSelectedRoute: HelpCenterSelectedRoute,
   HomepageRoute: HomepageRoute,
+  MenuRoute: MenuRoute,
   RecoverRoute: RecoverRoute,
   SafeSelectedRoute: SafeSelectedRoute,
   SigninRoute: SigninRoute,
