@@ -42,7 +42,7 @@ export default function SignIn(props: SignInProps) {
           Sign Up
         </Link>
         </div>
-        
+
 
         <img
           src="src/assets/Flor.png"

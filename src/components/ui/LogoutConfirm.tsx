@@ -1,6 +1,9 @@
 import { Link } from '@tanstack/react-router';
 import Header from './HeaderMenu';
-export default function LogoutConfirm() {
+
+interface LogoutConfirmProps {}
+
+export default function LogoutConfirm(props: LogoutConfirmProps) {
   return (
     <div className="h-screen bg-white relative flex flex-col font-family-franklin">
       
