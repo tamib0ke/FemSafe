@@ -37,7 +37,7 @@ export default function SignUp(props: SignUpnProps) {
             Sign In
           </Link>
           
-        <p className="mt-15 text-purple font-medium ">Cancel</p>
+       
         <img
           src="src/assets/Flor.png"
           alt=""

@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import Button from "./Buttons";
 
 interface RecoverProps {}
@@ -23,7 +24,14 @@ export default function Recover(props: RecoverProps) {
           text="Send"
           style="mt-20 bg-purple text-white font-semibold py-2 px-27 rounded-3xl hover:bg-purple-3 transition duration-300"
         />
-        <p className="mt-25 text-purple font-medium ">Cancel</p>
+
+        <Link 
+          to="/signin"
+          className="mt-15 text-purple font-medium "
+          >
+            Cancel
+          </Link>
+
         <img
           src="src/assets/Flor.png"
           alt=""

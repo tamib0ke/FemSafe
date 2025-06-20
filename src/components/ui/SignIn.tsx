@@ -30,17 +30,20 @@ export default function SignIn(props: SignInProps) {
         </Link>
 
       
-        <p className="mt-4 text-purple-2 font-medium">
+        <div className="flex justify-start items-center">
+          <p className="mt-4 text-purple-2 font-medium">
           Don't have an account?
         </p>
+        
         <Link
           to="/signup"
           className="text-purple font-medium underline mt-4 ml-4"
         >
           Sign Up
         </Link>
+        </div>
         
-        <p className="mt-15 text-purple font-medium ">Cancel</p>
+
         <img
           src="src/assets/Flor.png"
           alt=""
