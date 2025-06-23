@@ -6,7 +6,7 @@ export default function HelpSelected(props: HelpSelectedProps) {
     <div className="relative bg-gray-50 h-screen flex flex-col justify-between">
         
         <div className="flex-grow pt-8 px-4">
-             <div className="text-center">
+              <div className="text-center">
               <h4 className=" inline-block bg-white border-2  font-semibold py-2 px-6 rounded-full shadow-sm"> Marca el area en el mapa</h4>
                 
             </div>
@@ -14,7 +14,7 @@ export default function HelpSelected(props: HelpSelectedProps) {
 
         <div className="bg-white w-full rounded-t-3xl shadow-lg p-6 border-1 border-gray-300">
 
- 
+  
   <input type="checkbox" id="toggleButtons" className="hidden peer" />
 
 
@@ -26,7 +26,6 @@ export default function HelpSelected(props: HelpSelectedProps) {
 
   <div className="peer-checked:max-h-0 max-h-[500px] overflow-hidden transition-all duration-500 ease-in-out flex justify-around items-start text-center">
 
-       
           <div className="flex flex-col items-center">
             <button className="w-16 h-16 flex items-center justify-center  border border-purple-700 rounded-full text-custom-purple hover:bg-purple-200 transition-colors cursor-pointer">
               <img src=""alt="Icono de peligro" className="w-6 h-6 object-contain" />

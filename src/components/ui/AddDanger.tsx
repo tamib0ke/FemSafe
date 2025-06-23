@@ -31,11 +31,11 @@ export default function AddDanger(props: AddDangerProps) {
               alt="Cerrar"
               className="h-8 w-8"
             />
+
             <Link
               to="/chooseOption"
               className="text-purple font-medium underline"
             >
-
             </Link>
           </button>
 
@@ -49,7 +49,7 @@ export default function AddDanger(props: AddDangerProps) {
 
           <div className="text-center text-gray-800 text-xl mb-8">
             <p>
-              This area will be marked as dangerous, you can leave a description
+              ¿Qué tipo de peligro has encontrado? Por favor, descríbelo brevemente.
             </p>
           </div>
 
@@ -60,16 +60,22 @@ export default function AddDanger(props: AddDangerProps) {
               className="w-full border-1 border-purple-700 rounded-full py-3 px-5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-300 placeholder-custom"
             />
 
-            <button
-              className="w-full bg-purple-700 text-white py-3 px-5 rounded-full hover:bg-purple-800 transition-colors font-medium">
-              Guardar
-              <Link
-                to="/chooseOption"
-                className="text-purple font-medium underline"
-              >
+            
+          <Link 
+          to="/chooseOption"
+          className="mt-10 bg-purple-700 text-white font-semibold py-2 px-20 rounded-3xl hover:bg-purple-3 transition duration-300"
+          >
+            Añadir Peligro
+          </Link>
+            
 
-              </Link>
-            </button>
+            <Link
+              to="/chooseOption"
+              className="text-purple font-medium underline"
+            >
+            </Link>
+
+            
           </div>
         </div>
       </div>

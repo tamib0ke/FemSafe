@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as SigninRouteImport } from './routes/signin'
+import { Route as SendEmailRouteImport } from './routes/sendEmail'
 import { Route as SafeSelectedRouteImport } from './routes/safeSelected'
 import { Route as RecoverRouteImport } from './routes/recover'
 import { Route as MenuRouteImport } from './routes/menu'
@@ -34,6 +35,11 @@ const SignupRoute = SignupRouteImport.update({
 const SigninRoute = SigninRouteImport.update({
   id: '/signin',
   path: '/signin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SendEmailRoute = SendEmailRouteImport.update({
+  id: '/sendEmail',
+  path: '/sendEmail',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SafeSelectedRoute = SafeSelectedRouteImport.update({
@@ -122,6 +128,7 @@ export interface FileRoutesByFullPath {
   '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
+  '/sendEmail': typeof SendEmailRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
 }
@@ -140,6 +147,7 @@ export interface FileRoutesByTo {
   '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
+  '/sendEmail': typeof SendEmailRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
 }
@@ -159,6 +167,7 @@ export interface FileRoutesById {
   '/menu': typeof MenuRoute
   '/recover': typeof RecoverRoute
   '/safeSelected': typeof SafeSelectedRoute
+  '/sendEmail': typeof SendEmailRoute
   '/signin': typeof SigninRoute
   '/signup': typeof SignupRoute
 }
@@ -179,6 +188,7 @@ export interface FileRouteTypes {
     | '/menu'
     | '/recover'
     | '/safeSelected'
+    | '/sendEmail'
     | '/signin'
     | '/signup'
   fileRoutesByTo: FileRoutesByTo
@@ -197,6 +207,7 @@ export interface FileRouteTypes {
     | '/menu'
     | '/recover'
     | '/safeSelected'
+    | '/sendEmail'
     | '/signin'
     | '/signup'
   id:
@@ -215,6 +226,7 @@ export interface FileRouteTypes {
     | '/menu'
     | '/recover'
     | '/safeSelected'
+    | '/sendEmail'
     | '/signin'
     | '/signup'
   fileRoutesById: FileRoutesById
@@ -234,6 +246,7 @@ export interface RootRouteChildren {
   MenuRoute: typeof MenuRoute
   RecoverRoute: typeof RecoverRoute
   SafeSelectedRoute: typeof SafeSelectedRoute
+  SendEmailRoute: typeof SendEmailRoute
   SigninRoute: typeof SigninRoute
   SignupRoute: typeof SignupRoute
 }
@@ -252,6 +265,13 @@ declare module '@tanstack/react-router' {
       path: '/signin'
       fullPath: '/signin'
       preLoaderRoute: typeof SigninRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sendEmail': {
+      id: '/sendEmail'
+      path: '/sendEmail'
+      fullPath: '/sendEmail'
+      preLoaderRoute: typeof SendEmailRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/safeSelected': {
@@ -370,6 +390,7 @@ const rootRouteChildren: RootRouteChildren = {
   MenuRoute: MenuRoute,
   RecoverRoute: RecoverRoute,
   SafeSelectedRoute: SafeSelectedRoute,
+  SendEmailRoute: SendEmailRoute,
   SigninRoute: SigninRoute,
   SignupRoute: SignupRoute,
 }

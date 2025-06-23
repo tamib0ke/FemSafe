@@ -6,44 +6,46 @@ export default function SignUp(props: SignUpnProps) {
   return (
     <div className="flex justify-center items-center min-h-screen bg-white font-family-franklin">
       <div className="aling-center flex flex-col items-center">
-        <h1 className="text-3xl text-purple font-bold mb-15">Sign Up</h1>
+        <h1 className="text-3xl text-purple font-bold mb-10">Registrarse</h1>
         <input
           type="text"
-          placeholder="Name"
-          className="mt-4 p-2  font-bold  border-b-purple-4 border-b-2 w-64 text-purple-4 pb-4 "
+          placeholder="Nombre"
+          className="mt-8 p-2  font-bold  border-b-purple-4 border-b-2 w-64 text-purple-4 pb-4 "
         />
         <input
           type="text"
-          placeholder="Email"
+          placeholder="Correo Electrónico"
           className="mt-4 p-2  font-bold  border-b-purple-4 border-b-2 w-64 text-purple-4 pb-4 pt-8 "
         />
         <input
           type="password"
-          placeholder="Password"
-          className="mt-4 p-2  font-bold border-b-purple-4 border-b-2 w-64 text-purple-4 pb-4 pt-8"
+          placeholder="Contraseña"
+          className="mt-4  p-2  font-bold border-b-purple-4 border-b-2 w-64 text-purple-4 pb-4 pt-8"
         />
         <Button
           text="Login"
-          style="mt-20 bg-purple text-white font-semibold py-2 px-27 rounded-3xl hover:bg-purple-3 transition duration-300"
+          style="mt-10 bg-purple text-white font-semibold py-2 px-20 rounded-3xl hover:bg-purple-3 transition duration-300"
         />
         <p className="mt-5 text-purple-2 font-medium">
-          Already have an account?
+          ¿Ya tienes una cuenta?
         </p>
 
         <Link
             to="/signin"
             className="text-purple font-medium underline"
           >
-            Sign In
+          Iniciar Sesión
           </Link>
           
+
        
-        <img
-          src="src/assets/Flor.png"
-          alt=""
-          className="absolute bottom-0 right-0 w-40 z-0"
-        />
       </div>
+      {/* Imagen de la flor */}
+      <img
+        src="src/assets/Flor.png"
+        alt=""
+        className="absolute bottom-0 right-0 w-40 z-0"
+      />
     </div>
   );
 }

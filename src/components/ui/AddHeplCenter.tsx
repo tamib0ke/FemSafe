@@ -58,15 +58,12 @@ export default function  AddHeplCenter  (props: AddHeplCenterProps)  {
                 placeholder="Write here"
                 className="w-full border-1 border-purple-700 rounded-full py-3 px-5 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-300 placeholder-custom"
               />
-              <button
-                className="w-full bg-purple-700 text-white py-3 px-5 rounded-full hover:bg-purple-800 transition-colors font-medium cursor-pointer">
-                Guardar
-                <Link
-                  to="/chooseOption"
-                  className="text-purple font-medium underline"
-                >
-                </Link>
-              </button>
+              <Link 
+              to="/signin"
+              className="mt-10 bg-purple-700 text-white font-semibold py-2 px-20 rounded-3xl hover:bg-purple-3 transition duration-300"
+              >
+              Guardar
+            </Link>
             </div>
           </div>
         </div>

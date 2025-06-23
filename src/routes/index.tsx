@@ -7,5 +7,7 @@ export const Route = createFileRoute('/')({
 
 function RouteComponent() {
    return 
+   
     <WelcomeScreen imgLogo="src/assets/FemSafe Logo blanco.webp" title="FemSafe"/>
+
 }

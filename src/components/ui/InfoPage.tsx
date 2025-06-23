@@ -8,9 +8,9 @@ export default function InfoPage (props: InfoPageProps){
 
     <div className="h-screen bg-white relative flex flex-col font-family-franklin">
 
-       <Header
+      <Header
         text="Información"
-       />
+      />
 
         <div className="flex flex-col gap-10 mt-10 m-6">
             
@@ -44,7 +44,7 @@ export default function InfoPage (props: InfoPageProps){
             <h3 className="text-texto-violeta font-bold text-xl ">Centros de Ayuda</h3>
           </div>
           <p className="border border-gray-300 rounded-lg p-4 transition-colors duration-300 hover:bg-purple-2 text-sm text-black-text">
-           Aquí puedes encontrar información sobre 
+          Aquí puedes encontrar información sobre 
           espacios seguros que brindan atención especializada 
           a mujeres que enfrentan situaciones de violencia, 
           acoso o cualquier tipo de riesgo. 
