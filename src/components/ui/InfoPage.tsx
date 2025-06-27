@@ -9,7 +9,9 @@ export default function InfoPage (props: InfoPageProps){
     <div className="h-screen bg-white relative flex flex-col font-family-franklin">
 
       <Header
+        img="./src/assets/Back.png"
         text="Información"
+        style="justify-self-start h-6 text-center font-bold text-xl "
       />
 
         <div className="flex flex-col gap-10 mt-10 m-6">

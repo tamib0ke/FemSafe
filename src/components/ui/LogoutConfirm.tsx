@@ -9,8 +9,10 @@ export default function LogoutConfirm(props: LogoutConfirmProps) {
       
       {/* Header */}
     <Header
-      text="Log out"
-    />
+            img="./src/assets/Back.png"
+            text="Log out"
+            style=" h-6 text-center font-bold text-xl"
+          />
 
       {/* Modal */}
       <div className="flex flex-col items-center text-center bg-white border border-gray-300 shadow-md rounded-xl p-6 m-10 mt-20">

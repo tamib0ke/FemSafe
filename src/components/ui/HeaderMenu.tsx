@@ -1,8 +1,13 @@
 import { Link } from "@tanstack/react-router";
 
 interface HeaderMenuProps {
+    
+    img: string;
+    text: string;
+    style: string;
+    
 
-    text: string; 
+   
   
    
 
@@ -19,13 +24,13 @@ export default function Header(props: HeaderMenuProps) {
             <div className="grid grid-cols-3 items-center w-full">
             
                 <Link to="/menu">
-                    <img src="./src/assets/Back.png" alt="back" className="justify-self-start h-3" />
+                    <img src={props.img} alt="" className={props.style} />
                 </Link>
-                <h1 className="text-center font-bold text-xl">{props.text}</h1>
+                <h1 className={props.style}>{props.text}</h1>
 
                 {/* Botón de cerrar */}
                 <Link to="/homepage" className="justify-self-end">
-                <img src="./src/assets/Equis.png" alt="Cerrar" className="h-3" />
+                <img src="./src/assets/Equis.png" alt="Cerrar" className="h-6" />
                 </Link>
                 
             </div>

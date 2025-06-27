@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import Header from "./HeaderMenu";
 
 
 interface MenuProps {}
@@ -8,17 +9,12 @@ export default function Menu(props: MenuProps) {
     <div className="h-screen bg-white relative flex flex-col font-family-franklin">
 
       {/* Header */}
-      <div className="bg-purple text-white px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center ml-3 space-x-2">
-          <img src="./src/assets/FemSafe Logo morado.webp" alt="FemSafe" className="w-10/12 h-10" />
-          <h1 className="font-bold">FemSafe</h1>
-        </div>
-        
-        {/*Salir*/}
-        <Link to="/homepage" className="mr-3">
-          <img src="./src/assets/Equis.png" alt="Cerrar" />
-        </Link>
-      </div>
+
+        <Header
+                img="./src/assets/Logo&text.svg"
+                text=""
+                style=" flex items-center ml-3 "
+              />
 
  
       <div className="p-3 mt-10 mb-10 m-3 flex justify-start items-center">

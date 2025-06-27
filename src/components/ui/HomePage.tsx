@@ -74,6 +74,7 @@ export default function HomePage(props: HomePageProps) {
         </div>
 
         <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-xl shadow-lg px-6 py-4 flex justify-between items-center z-50 p-10">
+          
           {/* Botón: Inicio */}
           <button className="flex flex-col items-center text-gray-700 hover:text-pink-600 transition">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">

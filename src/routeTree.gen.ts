@@ -24,7 +24,6 @@ import { Route as ChooseOptionRouteImport } from './routes/chooseOption'
 import { Route as AddSafeRouteImport } from './routes/addSafe'
 import { Route as AddHelpCenterRouteImport } from './routes/addHelpCenter'
 import { Route as AddDangerRouteImport } from './routes/addDanger'
-import { Route as HeaderRouteImport } from './routes/Header'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SignupRoute = SignupRouteImport.update({
@@ -102,11 +101,6 @@ const AddDangerRoute = AddDangerRouteImport.update({
   path: '/addDanger',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HeaderRoute = HeaderRouteImport.update({
-  id: '/Header',
-  path: '/Header',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -115,7 +109,6 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/Header': typeof HeaderRoute
   '/addDanger': typeof AddDangerRoute
   '/addHelpCenter': typeof AddHelpCenterRoute
   '/addSafe': typeof AddSafeRoute
@@ -134,7 +127,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/Header': typeof HeaderRoute
   '/addDanger': typeof AddDangerRoute
   '/addHelpCenter': typeof AddHelpCenterRoute
   '/addSafe': typeof AddSafeRoute
@@ -154,7 +146,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/Header': typeof HeaderRoute
   '/addDanger': typeof AddDangerRoute
   '/addHelpCenter': typeof AddHelpCenterRoute
   '/addSafe': typeof AddSafeRoute
@@ -175,7 +166,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/Header'
     | '/addDanger'
     | '/addHelpCenter'
     | '/addSafe'
@@ -194,7 +184,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/Header'
     | '/addDanger'
     | '/addHelpCenter'
     | '/addSafe'
@@ -213,7 +202,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/Header'
     | '/addDanger'
     | '/addHelpCenter'
     | '/addSafe'
@@ -233,7 +221,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  HeaderRoute: typeof HeaderRoute
   AddDangerRoute: typeof AddDangerRoute
   AddHelpCenterRoute: typeof AddHelpCenterRoute
   AddSafeRoute: typeof AddSafeRoute
@@ -358,13 +345,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AddDangerRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/Header': {
-      id: '/Header'
-      path: '/Header'
-      fullPath: '/Header'
-      preLoaderRoute: typeof HeaderRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -377,7 +357,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  HeaderRoute: HeaderRoute,
   AddDangerRoute: AddDangerRoute,
   AddHelpCenterRoute: AddHelpCenterRoute,
   AddSafeRoute: AddSafeRoute,
