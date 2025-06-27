@@ -6,16 +6,16 @@ interface CardAddProps {
 }
 export default function CardAdd (props: CardAddProps) {
     return (
-        <div className="fixed inset-0 flex items-center justify-center z-50 p-4 -translate-y-20">
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4 -translate-y-20 font-family-franklin">
                 <div className="relative bg-white rounded-2xl shadow-xl max-w-sm p-8">
                   <Link to="/chooseOption">
                     <button className="absolute top-4 right-4 hover:text-purple-800">
-                      <img src="/ruta/al/icono-cerrar.png" alt="Cerrar" className="h-8 w-8" />
+                      <img src="/src/assets/Equis-morada.webp" alt="Cerrar" className="h-8 w-8" />
                     </button>
                   </Link>
         
                   <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center border-2 border-custom-purple rounded-full">
-                    <img src="/ruta/al/icono-alerta.png" alt="Ícono de advertencia" className="h-12 w-12 object-contain" />
+                    <img src="/src/assets/advertencia.png" alt="Ícono de advertencia" className="h-12 w-12 object-contain" />
                   </div>
         
                   <div className="text-center text-gray-800 text-xl mb-8">

@@ -16,8 +16,8 @@ export default function LogoutConfirm(props: LogoutConfirmProps) {
 
       {/* Modal */}
       <div className="flex flex-col items-center text-center bg-white border border-gray-300 shadow-md rounded-xl p-6 m-10 mt-20">
-        <img src="./src/assets/Vector (2).png" alt="Warning" className="h-12 mb-4" />
-        <h3 className="text-texto-violeta font-bold text-lg mb-2">Are you sure you want to log out?</h3>
+        <img src="./src/assets/advertencia.png" alt="Warning" className="h-12 mb-4" />
+        <h3 className="text-black-text font-bold text-lg mb-2">Are you sure you want to log out?</h3>
         <p className="text-sm text- mb-6">
           You will be logged out and will need to log in again to access your account.
         </p>
@@ -44,7 +44,7 @@ export default function LogoutConfirm(props: LogoutConfirmProps) {
 
      {/* Footer */}
 
-      <footer className="flex justify-center mt-70">
+      <footer className="flex justify-center p-5 ">
         <img src="./src/assets/LogoFooter.png" alt="" />
       </footer>
     </div>

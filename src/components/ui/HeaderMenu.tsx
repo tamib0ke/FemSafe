@@ -20,7 +20,7 @@ export default function Header(props: HeaderMenuProps) {
     return (
         
 
-        <header className="bg-purple text-white  px-4 py-3">
+        <header className="bg-purple text-white gap-4 p-4 rounded-b-lg ">
             <div className="grid grid-cols-3 items-center w-full">
             
                 <Link to="/menu">

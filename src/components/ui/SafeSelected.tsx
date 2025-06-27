@@ -6,7 +6,7 @@ interface SafeSelectedProps {
 
 export default function SafeSelected(props: SafeSelectedProps) {
   return (
-    <div className="relative bg-gray-50 h-screen flex flex-col justify-between">
+    <div className="relative bg-gray-50 h-screen flex flex-col justify-between font-family-franklin">
         
         <div className="flex-grow pt-8 px-4">
               <div className="text-center">

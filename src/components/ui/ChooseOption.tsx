@@ -10,7 +10,7 @@ export default function ChooseOption(props: ChooseOptionProps) {
       {/* Botón de Inicio */}
       <Link to="/homepage">
         <button className="fixed top-4 left-4 w-12 h-12 bg-white border-2 border-purple-700 rounded-full shadow-md flex items-center justify-center z-50 hover:bg-gray-100 transition-colors">
-          <img src="/ruta/al/icono-inicio.png" alt="Inicio" className="w-6 h-6 object-contain" />
+          <img src="/src/assets/home.webp" alt="Inicio" className="w-6 h-6 object-contain" />
         </button>
       </Link>
 
@@ -35,8 +35,8 @@ export default function ChooseOption(props: ChooseOptionProps) {
             {/* Peligro */}
             <div className="flex flex-col items-center">
               <Link to="/addDanger">
-                <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-                  <i className="fas fa-exclamation-triangle fa-2x"></i>
+                <button className="w-16 h-16 flex items-center justify-center border-2 border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+                  <img className="w-10" src="./src/assets/advertencia.png" alt="" />
                 </button>
               </Link>
               <span className="mt-2 text-custom-purple font-medium">Peligro</span>
@@ -45,8 +45,8 @@ export default function ChooseOption(props: ChooseOptionProps) {
             {/* Centro de ayuda */}
             <div className="flex flex-col items-center">
               <Link to="/addHelpCenter">
-                <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-                  <i className="fas fa-hands-helping fa-2x"></i>
+                <button className="w-16 h-16 flex items-center justify-center border-2 border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+                  <img className="w-10 h-auto justify-center items-center pt-2" src="./src/assets/Safe.png" alt="" />
                 </button>
               </Link>
               <span className="mt-2 text-custom-purple font-medium">Centro de ayuda</span>
@@ -55,8 +55,8 @@ export default function ChooseOption(props: ChooseOptionProps) {
             {/* Zona segura */}
             <div className="flex flex-col items-center">
               <Link to="/addSafe">
-                <button className="w-16 h-16 flex items-center justify-center border border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
-                  <i className="fas fa-check-circle fa-2x"></i>
+                <button className="w-16 h-16 flex items-center justify-center border-2 border-purple-700 rounded-full text-custom-purple hover:bg-purple-100 transition-colors cursor-pointer">
+                  <img className="w-10 h-auto justify-center items-center " src="./src/assets/Safe-escudo.webp" alt="" />
                 </button>
               </Link>
               <span className="mt-2 text-custom-purple font-medium">Zona segura</span>
