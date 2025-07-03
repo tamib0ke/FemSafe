@@ -13,7 +13,7 @@ export default function ChooseOption(props: ChooseOptionProps) {
 
       {/* Botón de Inicio encima del mapa */}
       <Link to="/homepage">
-        <button className="absolute top-4 left-4 w-12 h-12 bg-white border-2 border-purple-700 rounded-full shadow-md flex items-center justify-center z-20 hover:bg-gray-100 transition-colors">
+        <button className="absolute top-4 left-4 w-12 h-12 bg-white border-1 border-purple-700 rounded-full shadow-md flex items-center justify-center z-20 hover:bg-gray-100 transition-colors">
           <img
             src="/src/assets/home.webp"
             alt="Inicio"

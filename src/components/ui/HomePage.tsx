@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import Header from "./HeaderMenu";
+import CardHome from "./CardHome";
 
 interface HomePageProps {}
 
@@ -39,56 +40,30 @@ export default function HomePage(props: HomePageProps) {
         </div>
 
         <div className="flex space-x-4 overflow-x-auto pb-2 scrollbar-hide pt-6">
-          {/* Tarjeta 1 */}
-          <div className="min-w-[240px] bg-white rounded-xl shadow-md overflow-hidden">
-            <img
-              src="./src/assets/CasaDeLaMujer.png"
-              alt="Casa de la Mujer Esparza"
-              className="h-32 w-full object-cover"
-            />
-            <div className="p-3">
-              <h3 className="font-semibold text-sm font-family-franklin text-gray-900">
-                Casa de la Mujer Esparza
-              </h3>
-              <p className="text-xs text-gray-600 font-family-franklin mt-1">
-                Un centro de encuentro para capacitaciones y asesoría.
-              </p>
-            </div>
-          </div>
+         
+          <CardHome
+            imageSrc="./src/assets/CasaDeLaMujer.png"
+            imgageName="Casa de la Mujer Esparza"
+            title="Casa de la Mujer Esparza"
+            description="Un centro de encuentro para capacitaciones y asesoría."
+          />
 
-          {/* Tarjeta 2 */}
-          <div className="min-w-[240px] bg-white rounded-xl shadow-md overflow-hidden">
-            <img
-              src="./src/assets/Inamu.webp"
-              alt="Casa de la Mujer Alajuela"
-              className="h-32 w-full object-cover"
-            />
-            <div className="p-3">
-              <h3 className="font-semibold text-sm font-family-franklin text-gray-900">
-                Punto Violeta en Esparza (INAMU)
-              </h3>
-              <p className="text-xs text-gray-600 font-family-franklin mt-1">
-                Punto de atención, primeros auxilios psicológicos y orientación en casos de acoso/violencia sexual.
-              </p>
-            </div>
-          </div>
+          <CardHome
+            imageSrc="./src/assets/Inamu.webp"
+            imgageName="Casa de la Mujer Aajuela"
+            title="Punto Violeta en Esparza (INAMU)"
+            description="Punto de atención, primeros auxilios psicológicos y orientación en casos de acoso/violencia sexual."
+          />
+          <CardHome
+            imageSrc="./src/assets/Delegacióndepolicia.webp"
+            imgageName="Delegación de Policía de Esparza"
+            title="Delegación de Policía de Esparza"
+            description="Atiende denuncias las 24 horas, incluido violencia y trata de personas."
+          />
 
-          {/* Tarjeta 3 */}
-          <div className="min-w-[240px] bg-white rounded-xl shadow-md overflow-hidden">
-            <img
-              src="./src/assets/Delegacióndepolicia.webp"
-              alt="Centro de Apoyo San José"
-              className="h-32 w-full object-cover"
-            />
-            <div className="p-3">
-              <h3 className="font-semibold text-sm font-family-franklin text-gray-900">
-                Delegación de Policía de Esparza
-              </h3>
-              <p className="text-xs text-gray-600 font-family-franklin mt-1">
-                Atiende denuncias las 24 horas, incluido violencia y trata de personas.
-              </p>
-            </div>
-          </div>
+          
+
+
         </div>
       </div>
 
