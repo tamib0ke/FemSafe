@@ -192,6 +192,50 @@ export default function Map({ onMapClick }: MapProps) {
     });
 
    
+    // Mostrar centros de ayuda
+    const helpCenters = JSON.parse(localStorage.getItem("helpCenters") || "[]");
+    helpCenters.forEach((zone: { lat: number; lng: number; comment?: string }, index: number) => {
+      // Usar un círculo morado para el centro de ayuda
+      const circle = new window.google.maps.Circle({
+        strokeColor: "#a21caf", // morado
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#a21caf", // morado
+        fillOpacity: 0.35,
+        map,
+        center: { lat: zone.lat, lng: zone.lng },
+        radius: 100, // Más pequeño para centro de ayuda
+      });
+      const infowindow = new window.google.maps.InfoWindow({
+        content: `
+          <div style='font-family:sans-serif;font-size:14px;max-width:200px;'>
+            <p>${zone.comment || "Centro de ayuda"}</p>
+            <button id="delete-help-center-${index}" style="margin-top: 8px; padding: 6px 12px; font-size: 14px; background-color: #a21caf; color: white; border: none; border-radius: 4px; cursor: pointer;">
+              Eliminar
+            </button>
+          </div>
+        `
+      });
+      circle.addListener("click", () => {
+        infowindow.setPosition({ lat: zone.lat, lng: zone.lng });
+        infowindow.open(map);
+        google.maps.event.addListenerOnce(infowindow, "domready", () => {
+          const btn = document.getElementById(`delete-help-center-${index}`);
+          if (btn) {
+            btn.addEventListener("click", () => {
+              const confirmed = confirm("¿Querés eliminar este centro de ayuda?");
+              if (confirmed) {
+                const updatedCenters = [...helpCenters];
+                updatedCenters.splice(index, 1);
+                localStorage.setItem("helpCenters", JSON.stringify(updatedCenters));
+                window.location.reload();
+              }
+            });
+          }
+        });
+      });
+    });
+
     map.addListener("click", (e: any) => {
       if (onMapClick) {
         onMapClick({ lat: e.latLng.lat(), lng: e.latLng.lng() });

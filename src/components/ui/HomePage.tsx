@@ -6,7 +6,7 @@ interface HomePageProps {}
 export default function HomePage(props: HomePageProps) {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4 p-4 rounded-lg items-center border-b-3 border-purple">
+      <div className="grid grid-cols-2 py-4 px-4 rounded-lg items-center ">
         <img
           src="./src/assets/LogoFooter.png"
           alt="Logo izquierda"
