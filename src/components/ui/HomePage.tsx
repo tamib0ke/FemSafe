@@ -23,7 +23,7 @@ export default function HomePage(props: HomePageProps) {
 
   return (
     <div>
-      {/* Encabezado */}
+      
       <div className="grid grid-cols-2 py-4 px-4 rounded-lg items-center ">
         <img
           src="./src/assets/LogoFooter.png"
@@ -47,7 +47,7 @@ export default function HomePage(props: HomePageProps) {
         </h1>
       </div>
 
-      {/* Sección Centros de ayuda */}
+      {/*  Centros de ayuda */}
       <div className="px-4 mt-6">
         <div className="flex items-center justify-between mb-3 mt-10">
           <h2 className="text-lg font-bold font-family-franklin text-black">
@@ -79,7 +79,7 @@ export default function HomePage(props: HomePageProps) {
         </div>
       </div>
 
-      {/* Otras secciones */}
+     
       <div className="bg-purple-100 mx-4 mt-10 mb-30 p-4 rounded-xl shadow-sm flex gap-3 items-start">
         <div>
           <img
@@ -99,7 +99,7 @@ export default function HomePage(props: HomePageProps) {
         </div>
       </div>
 
-      {/* Footer */}
+
       <footer className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-xl shadow-lg px-6 py-2 flex justify-center items-center">
         <Link to="/chooseOption">
           <button className="flex flex-col items-center text-gray-700 hover:text-pink-600 transition">
