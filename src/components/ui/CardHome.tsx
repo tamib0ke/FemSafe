@@ -3,16 +3,33 @@ interface CardHomeProps {
   imgageName: string;
   title: string;
   description: string;
+  link?: string; 
 }
 
 export default function CardHome(props: CardHomeProps) {
   return (
     <div className="min-w-[240px] bg-white rounded-xl shadow-md overflow-hidden font-family-franklin">
-      <img
-        src={props.imageSrc}
-        alt={props.imgageName}
-        className="h-32 w-full object-cover"
-      />
+      {props.link ? (
+        <a
+        className="cursor-pointer"
+          href={props.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={props.imageSrc}
+            alt={props.imgageName}
+            className="h-32 w-full object-cover"
+          />
+        </a>
+      ) : (
+        <img
+          src={props.imageSrc}
+          alt={props.imgageName}
+          className="h-32 w-full object-cover"
+        />
+      )}
+
       <div className="p-3">
         <h3 className="font-semibold text-sm text-gray-900">
           {props.title}

@@ -73,6 +73,7 @@ export default function HomePage(props: HomePageProps) {
                 imgageName={center.title}
                 title={center.title}
                 description={center.description}
+                link={center.link}
               />
             ))}
         </div>
