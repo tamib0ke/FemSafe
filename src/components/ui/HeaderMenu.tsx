@@ -21,10 +21,10 @@ export default function Header(props: HeaderMenuProps) {
         
 
         <header className="bg-purple text-white gap-4 p-4 rounded-b-lg ">
-            <div className="grid grid-cols-3 items-center w-full">
+            <div className="grid  grid-cols-[auto_1fr_auto] items-center w-full">
             
                 <Link to="/menu">
-                    <img src={props.img} alt="" className={props.style} />
+                    <img src={props.img} alt="" className={props.style}/>
                 </Link>
                 <h1 className={props.style}>{props.text}</h1>
 

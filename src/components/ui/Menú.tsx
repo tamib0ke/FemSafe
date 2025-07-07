@@ -13,7 +13,7 @@ export default function Menu(props: MenuProps) {
         <Header
                 img="./src/assets/Logo&text-white.png"
                 text=""
-                style=" flex items-center ml-3 h-auto "
+                style=" flex items-center ml-3 h-10 "
               />
 
  
@@ -23,16 +23,16 @@ export default function Menu(props: MenuProps) {
       </div>
 
     
-      <nav className=" flex flex-col gap-5 p-3 font-bold text-xl text-black-text">
+      <nav className=" flex flex-col gap-5 ml-5 font-bold text-xl text-black-text">
         {/*Información */}
-        <Link to="/infopage" className="border-t-1 border-b-1 pt-5 pb-5 border-purple-2  flex items-center gap-3 py-2 hover:bg-purple-2  hover:text-white">
-          <img className=" px-4 py-3 flex justify-between items-center h-14" src="./src/assets/Info.png" alt="" />
+        <Link to="/infopage" className=" pt-5 pb-5  flex items-center gap-3 py-2 hover:bg-purple-2  hover:text-white transition-colors duration-300">
+          <img className=" px-4 py-3 flex justify-between items-center h-13" src="./src/assets/Info.png" alt="" />
           Información
         </Link>
 
 
         {/* Log Out */}
-        <Link to="/logout" className="border-t-1 border-b-1 pt-5 pb-5 border-purple-2 flex items-center gap-3 py-2 hover:bg-purple-2 hover:text-white transition-colors duration-300">
+        <Link to="/logout" className="pt-5 pb-5  flex items-center gap-3 py-2 hover:bg-purple-2  hover:text-white transition-colors duration-300">
           <img className="px-4 py-3 flex justify-between items-center h-13" src="./src/assets/Logout.png" alt="" />
           Log Out
         </Link>

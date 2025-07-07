@@ -11,7 +11,7 @@ export default function InfoPage (props: InfoPageProps){
       <Header
         img="./src/assets/Back.png"
         text="Información"
-        style="justify-self-start h-6 text-center font-bold text-xl "
+        style="h-6 text-center font-bold text-xl "
       />
 
         <div className="flex flex-col gap-10 mt-10 m-5">
@@ -59,7 +59,7 @@ export default function InfoPage (props: InfoPageProps){
       {/* Footer */}
 
       <footer className="flex justify-center p-5 ">
-        <img src="./src/assets/LogoFooter.png" alt="" />
+        <img className="h-10" src="./src/assets/LogoFooter.png" alt="" />
       </footer>
     </div>
   );

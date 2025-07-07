@@ -24,11 +24,11 @@ export default function HomePage(props: HomePageProps) {
   return (
     <div>
       
-      <div className="grid grid-cols-2 py-4 px-4 rounded-lg items-center ">
+      <div className="grid grid-cols-2 border-b-3 border-purple py-4 px-4 rounded-lg items-center ">
         <img
           src="./src/assets/LogoFooter.png"
           alt="Logo izquierda"
-          className="justify-self-start ml-3 h-auto"
+          className="justify-self-start ml-3 h-10"
         />
         <Link to="/menu" className="justify-self-end">
           <button>
